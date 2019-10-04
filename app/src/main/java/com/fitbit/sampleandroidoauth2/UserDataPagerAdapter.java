@@ -16,10 +16,6 @@ import android.support.v13.app.FragmentPagerAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by jboggess on 10/17/16.
- */
-
 public class UserDataPagerAdapter extends FragmentPagerAdapter {
 
     private final List<InfoFragment> fragments = new ArrayList<>();
@@ -31,14 +27,8 @@ public class UserDataPagerAdapter extends FragmentPagerAdapter {
         if (containsScope(Scope.profile)) {
             fragments.add(new ProfileFragment());
         }
-        if (containsScope(Scope.settings)) {
-            fragments.add(new DeviceFragment());
-        }
         if (containsScope(Scope.activity)) {
             fragments.add(new ActivitiesFragment());
-        }
-        if (containsScope(Scope.weight)) {
-            fragments.add(new WeightLogFragment());
         }
     }
 
