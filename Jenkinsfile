@@ -12,6 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh './gradlew assembleDebug'
             }
         }
         stage('Test') {
